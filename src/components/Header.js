@@ -21,7 +21,7 @@ export const Header = () => {
 
   return (
     <header>
-      <nav className="bg-white border-b border-gray-200 dark:bg-gray-900">
+      <nav className="bg-white border-b dark:border-b-0 dark:border-gray-200 dark:bg-gray-900">
         <div className="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
           <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <img src={Logo} className="h-8" alt="Cinema Logo" />
