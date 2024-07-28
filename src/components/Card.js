@@ -1,19 +1,24 @@
 import { Link } from "react-router-dom";
+import  Backup  from '../assets/images/backup.png';
 
-export const Card = () => {
+export const Card = ({movie}) => {
+
+  const {id,original_title,overview,poster_path}=movie;
+  const image= poster_path ? `https://image.tmdb.org/t/p/w500/${poster_path}` :Backup;
+  
   return (
     <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-              <Link to="#">
-                <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
+              <Link to={`/movie/${id}`}>
+                <img className="rounded-t-lg" src={image} alt="" />
               </Link>
               <div className="p-5">
-                <Link to="#">
-                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                <Link to={`/movie/${id}`}>
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{original_title}</h5>
                 </Link>
                 <Link to="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-black dark:text-white">
                   Read more
                 </Link>
-                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{overview}</p>
               </div>
             </div>
   )
