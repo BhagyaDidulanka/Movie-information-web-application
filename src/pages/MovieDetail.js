@@ -22,6 +22,10 @@ export const MovieDetail = () => {
     fetchMovie();
   }, [params.id]);
 
+  useEffect(() => {
+    document.title = `${movie.title} / Cinemate`;
+  });
+
   return (
     <main>
       <section className="flex flex-wrap justify-around py-5">
