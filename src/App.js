@@ -1,5 +1,5 @@
 import { AllRoutes } from './routes/AllRoutes';
-import { Header,Footer,Card } from './components/index';
+import { Header,Footer } from './components/index';
 
 import './App.css';
 
